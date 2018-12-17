@@ -1,0 +1,939 @@
+examples/patches/CVE-2014-0206
+open success
+aio_read_events_ring   target not found
+examples/patches/CVE-2014-1739
+open success
+media_device_enum_entities   both found
+target_func=memset     house_func=media_device_enum_entities
+not inline in reference kernel, not inline in target kernel
+examples/patches/CVE-2014-2706
+open success
+sta_info_alloc   both not found
+ieee80211_tx_h_unicast_ps_buf   both not found
+ieee80211_sta_ps_deliver_wakeup   both not found
+examples/patches/CVE-2014-3145
+open success
+sk_run_filter   target not found
+examples/patches/CVE-2014-4014
+open success
+inode_owner_or_capable   both found
+generic_permission   both found
+inode_change_ok   both found
+capable_wrt_inode_uidgid   both found
+check_sticky   both not found
+setattr_copy   both found
+target_func=current_user_ns     house_func=inode_owner_or_capable
+inline in reference kernel, inline in target kernel
+target_func=ns_capable     house_func=inode_owner_or_capable
+not inline in reference kernel, not inline in target kernel
+target_func=capable_wrt_inode_uidgid     house_func=generic_permission
+not inline in reference kernel, not inline in target kernel
+target_func=ns_capable     house_func=capable_wrt_inode_uidgid
+not inline in reference kernel, not inline in target kernel
+target_func=kgid_has_mapping     house_func=capable_wrt_inode_uidgid
+inline in reference kernel, inline in target kernel
+target_func=capable_wrt_inode_uidgid     house_func=setattr_copy
+not inline in reference kernel, not inline in target kernel
+examples/patches/CVE-2014-4656
+open success
+snd_ctl_add   both found
+examples/patches/CVE-2014-8709
+open success
+ieee80211_fragment   both not found
+examples/patches/CVE-2014-9322
+open success
+examples/patches/CVE-2014-9420
+open success
+rock_continue   both not found
+examples/patches/CVE-2014-9731
+open success
+udf_symlink_filler   both not found
+examples/patches/CVE-2014-9777
+examples/patches/CVE-2014-9778
+examples/patches/CVE-2014-9779
+examples/patches/CVE-2014-9780
+open success
+examples/patches/CVE-2014-9781
+open success
+fb_cmap_to_user   both found
+examples/patches/CVE-2014-9784
+open success
+diag_dbgfs_read_status   target not found
+diag_dbgfs_read_workpending   target not found
+diag_dbgfs_read_mempool   target not found
+diag_dbgfs_read_power   target not found
+diag_dbgfs_read_table   target not found
+diag_dbgfs_read_dcistats   target not found
+examples/patches/CVE-2014-9785
+open success
+qseecom_query_app_loaded   target not found
+qseecom_load_app   target not found
+qseecom_send_service_cmd   target not found
+qseecom_set_client_mem_param   target not found
+examples/patches/CVE-2014-9787
+open success
+__qseecom_send_cmd   target not found
+examples/patches/CVE-2014-9788
+open success
+voice_config_cvs_vocoder_amr_rate   target not found
+voice_send_cvs_register_cal_cmd   target not found
+voice_send_hd_cmd   target not found
+examples/patches/CVE-2014-9789
+examples/patches/CVE-2014-9790
+open success
+mmc_wr_pack_stats_write   target not found
+mmc_bkops_stats_read   target not found
+mmc_wr_pack_stats_read   target not found
+examples/patches/CVE-2014-9791
+open success
+n_tty_write   both found
+examples/patches/CVE-2014-9792
+examples/patches/CVE-2014-9795
+examples/patches/CVE-2014-9796
+examples/patches/CVE-2014-9797
+examples/patches/CVE-2014-9799
+examples/patches/CVE-2014-9800
+examples/patches/CVE-2014-9801
+examples/patches/CVE-2014-9802
+examples/patches/CVE-2014-9803
+open success
+set_pte_at   both not found
+examples/patches/CVE-2014-9914
+open success
+ip4_datagram_release_cb   both found
+target_func=__sk_dst_get     house_func=ip4_datagram_release_cb
+inline in reference kernel, inline in target kernel
+target_func=check     house_func=ip4_datagram_release_cb
+not inline in reference kernel, inline in target kernel
+target_func=rcu_read_unlock     house_func=ip4_datagram_release_cb
+inline in reference kernel, inline in target kernel
+target_func=IS_ERR     house_func=ip4_datagram_release_cb
+inline in reference kernel, inline in target kernel
+target_func=sk_dst_set     house_func=ip4_datagram_release_cb
+inline in reference kernel, inline in target kernel
+examples/patches/CVE-2014-9922
+open success
+ecryptfs_mount   reference not found
+examples/patches/CVE-2014-9940
+open success
+regulator_ena_gpio_free   both found
+examples/patches/CVE-2015-0572
+open success
+compat_get_fastrpc_ioctl_invoke   both not found
+compat_get_fastrpc_ioctl_mmap   both not found
+examples/patches/CVE-2015-3288
+open success
+do_linear_fault   both not found
+do_anonymous_page   both not found
+examples/patches/CVE-2015-3636
+open success
+ping_unhash   both found
+target_func=sk_nulls_node_init     house_func=ping_unhash
+inline in reference kernel, inline in target kernel
+examples/patches/CVE-2015-5706
+open success
+examples/patches/CVE-2015-6619
+examples/patches/CVE-2015-6640
+open success
+prctl_set_vma_anon_name   both not found
+examples/patches/CVE-2015-7872
+open success
+key_gc_unused_keys   both found
+target_func=test_bit     house_func=key_gc_unused_keys
+inline in reference kernel, inline in target kernel
+examples/patches/CVE-2015-8888
+examples/patches/CVE-2015-8889
+examples/patches/CVE-2015-8891
+examples/patches/CVE-2015-8893
+examples/patches/CVE-2015-8944
+open success
+ioresources_init   both found
+target_func=proc_create     house_func=ioresources_init
+inline in reference kernel, inline in target kernel
+examples/patches/CVE-2015-8950
+open success
+__alloc_from_pool   target not found
+arm64_swiotlb_alloc_coherent   target not found
+examples/patches/CVE-2015-8951
+open success
+msm_lsm_open   target not found
+msm_lsm_close   target not found
+msm_lsm_ioctl_shared   target not found
+examples/patches/CVE-2015-8955
+open success
+validate_group   both not found
+validate_event   both found
+target_func=to_arm_pmu     house_func=validate_event
+inline in reference kernel, inline in target kernel
+examples/patches/CVE-2015-8961
+open success
+__ext4_journal_stop   both found
+examples/patches/CVE-2015-8962
+open success
+examples/patches/CVE-2015-8963
+open success
+perf_swevent_add   both found
+target_func=WARN_ON_ONCE     house_func=perf_swevent_add
+inline in reference kernel, inline in target kernel
+examples/patches/CVE-2015-8964
+open success
+tty_set_termios_ldisc   both not found
+examples/patches/CVE-2015-8966
+open success
+examples/patches/CVE-2015-8967
+open success
+examples/patches/CVE-2015-9004
+open success
+SYSCALL_DEFINE5   both not found
+examples/patches/CVE-2016-0723
+open success
+tty_ioctl   both found
+target_func=tiocgetd     house_func=tty_ioctl
+inline in reference kernel, inline in target kernel
+examples/patches/CVE-2016-0758
+open success
+asn1_find_indefinite_length   both not found
+examples/patches/CVE-2016-0801
+open success
+wl_notify_sched_scan_results   both found
+target_func=MIN     house_func=wl_notify_sched_scan_results
+inline in reference kernel, inline in target kernel
+target_func=memcpy     house_func=wl_notify_sched_scan_results
+not inline in reference kernel, not inline in target kernel
+examples/patches/CVE-2016-0802
+open success
+wl_host_event   both found
+examples/patches/CVE-2016-1583
+open success
+examples/patches/CVE-2016-2059
+open success
+msm_ipc_router_bind_control_port   target not found
+examples/patches/CVE-2016-2066
+open success
+msm_compr_audio_effects_config_info   target not found
+msm_audio_effects_reverb_handler   target not found
+msm_audio_effects_popless_eq_handler   target not found
+msm_audio_effects_virtualizer_handler   target not found
+msm_audio_effects_bass_boost_handler   target not found
+__msm_audio_effects_volume_handler   target not found
+examples/patches/CVE-2016-2067
+open success
+kgsl_setup_useraddr   both not found
+check_vma   both not found
+memdesc_sg_virt   target not found
+examples/patches/CVE-2016-2068
+open success
+audio_effects_shared_ioctl   target not found
+examples/patches/CVE-2016-2184
+open success
+snd_usb_parse_audio_interface   both found
+create_uaxx_quirk   both found
+create_fixed_stream_quirk   both found
+target_func=list_del     house_func=snd_usb_parse_audio_interface
+inline in reference kernel, inline in target kernel
+target_func=INIT_LIST_HEAD     house_func=snd_usb_parse_audio_interface
+inline in reference kernel, inline in target kernel
+target_func=list_del     house_func=create_uaxx_quirk
+inline in reference kernel, inline in target kernel
+target_func=INIT_LIST_HEAD     house_func=create_uaxx_quirk
+inline in reference kernel, inline in target kernel
+target_func=list_del     house_func=create_fixed_stream_quirk
+inline in reference kernel, inline in target kernel
+target_func=INIT_LIST_HEAD     house_func=create_fixed_stream_quirk
+inline in reference kernel, inline in target kernel
+examples/patches/CVE-2016-2469
+open success
+examples/patches/CVE-2016-2489
+open success
+mdss_debug_perf_mode_read   target not found
+panel_debug_base_offset_read   target not found
+mdss_debug_perf_panic_read   target not found
+mdss_debug_base_offset_read   target not found
+mdss_debug_perf_panic_write   target not found
+mdss_debug_perf_mode_write   target not found
+examples/patches/CVE-2016-2501
+open success
+msm_actuator_init_step_table   target not found
+msm_actuator_bivcm_init_step_table   target not found
+examples/patches/CVE-2016-2502
+open success
+gser_ioctl   target not found
+examples/patches/CVE-2016-2546
+open success
+snd_timer_user_release   both found
+snd_timer_user_open   both found
+__snd_timer_user_ioctl   both not found
+target_func=mutex_lock     house_func=snd_timer_user_release
+not inline in reference kernel, not inline in target kernel
+target_func=mutex_unlock     house_func=snd_timer_user_release
+not inline in reference kernel, not inline in target kernel
+target_func=mutex_init     house_func=snd_timer_user_open
+inline in reference kernel, inline in target kernel
+examples/patches/CVE-2016-3706
+examples/patches/CVE-2016-3813
+open success
+dwc3_store_ep_num   target not found
+examples/patches/CVE-2016-3854
+examples/patches/CVE-2016-3855
+open success
+examples/patches/CVE-2016-3858
+open success
+firmware_name_store   target not found
+examples/patches/CVE-2016-3860
+open success
+audio_cal_shared_ioctl   target not found
+examples/patches/CVE-2016-3866
+open success
+msm_compr_ioctl_shared   target not found
+examples/patches/CVE-2016-3893
+open success
+wcdcal_hwdep_ioctl_shared   target not found
+examples/patches/CVE-2016-3901
+open success
+qcedev_check_cipher_params   both not found
+qcedev_check_sha_params   target not found
+examples/patches/CVE-2016-3906
+open success
+add_to_ptable   both not found
+split_ptable_args   target not found
+msm_core_ptable_write   target not found
+msm_core_ptable_read   target not found
+msm_core_enable_write   target not found
+examples/patches/CVE-2016-3907
+open success
+audio_compat_ioctl   target not found
+examples/patches/CVE-2016-3931
+open success
+qseecom_send_modfd_resp   target not found
+qseecom_unregister_listener   target not found
+__validate_send_modfd_resp_inputs   both not found
+examples/patches/CVE-2016-3938
+open success
+__mdss_overlay_src_split_sort   both not found
+examples/patches/CVE-2016-3939
+open success
+mdss_misr_get_map   both not found
+examples/patches/CVE-2016-4794
+open success
+examples/patches/CVE-2016-4998
+open success
+check_entry   target not found
+check_entry_size_and_hooks   both not found
+check_entry   target not found
+check_compat_entry_size_and_hooks   both not found
+check_entry_size_and_hooks   both not found
+examples/patches/CVE-2016-5195
+open success
+__get_user_pages   both found
+follow_page_mask   both found
+target_func=can_follow_write_pte     house_func=follow_page_mask
+inline in reference kernel, inline in target kernel
+examples/patches/CVE-2016-5340
+open success
+is_ashmem_file   both not found
+examples/patches/CVE-2016-5342
+open success
+examples/patches/CVE-2016-5343
+open success
+voice_svc_write   target not found
+voice_svc_send_req   both not found
+examples/patches/CVE-2016-5344
+open success
+examples/patches/CVE-2016-5345
+open success
+examples/patches/CVE-2016-5347
+open success
+msm_qti_pp_get_channel_map_mixer   target not found
+examples/patches/CVE-2016-5696
+open success
+tcp_send_challenge_ack   both found
+examples/patches/CVE-2016-5853
+open success
+msm_ds2_dap_update_num_devices   both not found
+examples/patches/CVE-2016-5854
+examples/patches/CVE-2016-5855
+examples/patches/CVE-2016-5856
+examples/patches/CVE-2016-5857
+examples/patches/CVE-2016-5858
+open success
+examples/patches/CVE-2016-5859
+open success
+examples/patches/CVE-2016-5860
+open success
+examples/patches/CVE-2016-5861
+examples/patches/CVE-2016-5862
+examples/patches/CVE-2016-5863
+open success
+hiddev_ioctl_usage   both not found
+hiddev_lookup_usage   both not found
+examples/patches/CVE-2016-5864
+examples/patches/CVE-2016-5867
+open success
+examples/patches/CVE-2016-5868
+open success
+examples/patches/CVE-2016-6136
+open success
+examples/patches/CVE-2016-6681
+open success
+audio_aio_compat_ioctl   target not found
+audio_in_compat_ioctl   target not found
+examples/patches/CVE-2016-6692
+open success
+examples/patches/CVE-2016-6693
+open success
+examples/patches/CVE-2016-6694
+open success
+examples/patches/CVE-2016-6695
+open success
+examples/patches/CVE-2016-6696
+open success
+examples/patches/CVE-2016-6698
+open success
+evrc_in_compat_ioctl   target not found
+amrwb_in_compat_ioctl   target not found
+aac_in_compat_ioctl   target not found
+amrnb_in_compat_ioctl   target not found
+audio_compat_ioctl   target not found
+audio_effects_compat_ioctl   target not found
+audio_compat_ioctl   target not found
+audio_aio_compat_ioctl   target not found
+qcelp_in_compat_ioctl   target not found
+audio_compat_ioctl   target not found
+examples/patches/CVE-2016-6725
+open success
+_qcrypto_process_aead   target not found
+examples/patches/CVE-2016-6738
+open success
+examples/patches/CVE-2016-6750
+open success
+smp2p_find_entry_v1   target not found
+smp2p_int_stats   target not found
+smp2p_irq_map   target not found
+examples/patches/CVE-2016-6752
+open success
+qseecom_send_command   target not found
+__qseecom_process_rpmb_svc_cmd   target not found
+qseecom_release   target not found
+qseecom_ioctl   target not found
+qseecom_set_client_mem_param   target not found
+examples/patches/CVE-2016-6786
+open success
+perf_event_task_disable   both found
+perf_event_for_each   both not found
+perf_event_aux   both found
+_perf_ioctl   reference not found
+perf_read   both found
+SYSCALL_DEFINE5   both not found
+perf_event_task_enable   both found
+perf_remove_from_owner   both not found
+perf_event_for_each_child   both found
+perf_event_read_group   both not found
+_perf_event_refresh   both not found
+perf_pmu_migrate_context   both found
+target_func=list_for_each_entry     house_func=perf_event_task_disable
+inline in reference kernel, inline in target kernel
+target_func=perf_event_ctx_lock     house_func=perf_event_task_disable
+not inline in reference kernel, inline in target kernel
+target_func=perf_event_for_each_child     house_func=perf_event_task_disable
+not inline in reference kernel, inline in target kernel
+target_func=perf_event_ctx_unlock     house_func=perf_event_task_disable
+not inline in reference kernel, inline in target kernel
+target_func=perf_event_ctx_lock     house_func=perf_read
+not inline in reference kernel, inline in target kernel
+target_func=perf_read_hw     house_func=perf_read
+inline in reference kernel, inline in target kernel
+target_func=perf_event_ctx_unlock     house_func=perf_read
+not inline in reference kernel, inline in target kernel
+target_func=list_for_each_entry     house_func=perf_event_task_enable
+inline in reference kernel, inline in target kernel
+target_func=perf_event_ctx_lock     house_func=perf_event_task_enable
+not inline in reference kernel, inline in target kernel
+target_func=perf_event_for_each_child     house_func=perf_event_task_enable
+not inline in reference kernel, inline in target kernel
+target_func=perf_event_ctx_unlock     house_func=perf_event_task_enable
+not inline in reference kernel, inline in target kernel
+target_func=mutex_lock_double     house_func=perf_pmu_migrate_context
+inline in reference kernel, inline in target kernel
+target_func=mutex_unlock     house_func=perf_pmu_migrate_context
+not inline in reference kernel, not inline in target kernel
+examples/patches/CVE-2016-6791
+open success
+audio_aio_release   target not found
+audio_aio_ioctl   target not found
+examples/patches/CVE-2016-6828
+open success
+tcp_check_send_head   both not found
+examples/patches/CVE-2016-7042
+open success
+examples/patches/CVE-2016-7097
+open success
+ocfs2_init_acl   both not found
+btrfs_set_acl   both not found
+v9fs_xattr_set_acl   both not found
+__ext4_set_acl   reference not found
+ext2_set_acl   both not found
+ocfs2_set_acl   both not found
+f2fs_set_acl   reference not found
+reiserfs_set_acl   both not found
+jffs2_set_acl   both not found
+examples/patches/CVE-2016-7117
+open success
+__sys_recvmmsg   both found
+target_func=fput_light     house_func=__sys_recvmmsg
+inline in reference kernel, inline in target kernel
+examples/patches/CVE-2016-7910
+open success
+disk_seqf_stop   both found
+examples/patches/CVE-2016-7911
+examples/patches/CVE-2016-7912
+examples/patches/CVE-2016-7913
+open success
+xc2028_set_config   both not found
+examples/patches/CVE-2016-7914
+examples/patches/CVE-2016-7915
+open success
+hid_input_field   both not found
+examples/patches/CVE-2016-7916
+open success
+environ_read   both found
+examples/patches/CVE-2016-7917
+open success
+examples/patches/CVE-2016-8414
+open success
+scm_call2   target not found
+examples/patches/CVE-2016-8418
+open success
+examples/patches/CVE-2016-8434
+open success
+kgsl_add_fence_event   target not found
+kgsl_ioctl_syncsource_create_fence   target not found
+examples/patches/CVE-2016-8450
+open success
+q6lsm_client_free   target not found
+msm_cpe_lsm_ioctl_shared   target not found
+msm_dai_slim_remove_dai_data   both not found
+examples/patches/CVE-2016-8463
+open success
+fuse_readpages_fill   both found
+target_func=lru_cache_add_file     house_func=fuse_readpages_fill
+inline in reference kernel, inline in target kernel
+examples/patches/CVE-2016-8480
+open success
+qseecom_load_app   target not found
+examples/patches/CVE-2016-8483
+open success
+msm_core_ioctl   target not found
+examples/patches/CVE-2016-8650
+open success
+mpi_powm   target not found
+examples/patches/CVE-2016-8655
+open success
+packet_do_bind   both not found
+packet_set_ring   both found
+packet_setsockopt   both found
+target_func=lock_sock     house_func=packet_set_ring
+inline in reference kernel, inline in target kernel
+target_func=release_sock     house_func=packet_setsockopt
+not inline in reference kernel, inline in target kernel
+examples/patches/CVE-2016-9120
+open success
+ion_ioctl   both found
+ion_handle_put   both found
+target_func=mutex_lock     house_func=ion_ioctl
+not inline in reference kernel, not inline in target kernel
+target_func=ion_handle_get_by_id_nolock     house_func=ion_ioctl
+not inline in reference kernel, inline in target kernel
+target_func=IS_ERR     house_func=ion_ioctl
+inline in reference kernel, inline in target kernel
+target_func=mutex_unlock     house_func=ion_ioctl
+not inline in reference kernel, not inline in target kernel
+target_func=ion_handle_put_nolock     house_func=ion_handle_put
+not inline in reference kernel, inline in target kernel
+examples/patches/CVE-2016-9754
+open success
+ring_buffer_resize   both found
+target_func=DIV_ROUND_UP     house_func=ring_buffer_resize
+inline in reference kernel, inline in target kernel
+examples/patches/CVE-2016-9793
+open success
+sock_setsockopt   both found
+target_func=max_t     house_func=sock_setsockopt
+inline in reference kernel, inline in target kernel
+examples/patches/CVE-2016-9794
+open success
+snd_pcm_period_elapsed   both found
+target_func=kill_fasync     house_func=snd_pcm_period_elapsed
+not inline in reference kernel, not inline in target kernel
+examples/patches/CVE-2016-9806
+open success
+examples/patches/CVE-2016-10200
+open success
+l2tp_ip6_bind   target not found
+l2tp_ip_bind   target not found
+examples/patches/CVE-2016-10229
+open success
+udpv6_recvmsg   both found
+udp_recvmsg   both found
+target_func=udp_lib_checksum_complete     house_func=udpv6_recvmsg
+inline in reference kernel, inline in target kernel
+target_func=skb_csum_unnecessary     house_func=udpv6_recvmsg
+inline in reference kernel, inline in target kernel
+target_func=udp_lib_checksum_complete     house_func=udp_recvmsg
+inline in reference kernel, inline in target kernel
+examples/patches/CVE-2016-10230
+open success
+qce_aead_req   target not found
+examples/patches/CVE-2016-10231
+examples/patches/CVE-2016-10232
+open success
+mdss_fb_change_dfps_mode   target not found
+mdss_fb_force_panel_dead   target not found
+panel_debug_base_offset_write   target not found
+mdss_debug_factor_write   target not found
+examples/patches/CVE-2016-10233
+examples/patches/CVE-2016-10234
+open success
+ipa_generate_rt_hw_tbl_v1_1   both not found
+ipa_get_rt_hw_tbl_size   target not found
+ipa_generate_flt_hw_tbl_v1_1   both not found
+ipa_generate_rt_hw_tbl_common   target not found
+ipa_nat_dma_cmd   target not found
+ipa_generate_rt_hw_tbl_v2   both not found
+ipa_generate_flt_hw_tbl_common   target not found
+ipa_generate_flt_hw_tbl_v2   target not found
+examples/patches/CVE-2016-10236
+examples/patches/CVE-2016-10275
+examples/patches/CVE-2016-10285
+open success
+mdss_dsi_unblank   target not found
+examples/patches/CVE-2016-10286
+examples/patches/CVE-2016-10287
+open success
+create_cal_block   target not found
+examples/patches/CVE-2016-10289
+open success
+_debug_stats_read   target not found
+examples/patches/CVE-2016-10290
+open success
+debugfs_exit   both not found
+debug_close   target not found
+debugfs_init   both found
+debug_open   target not found
+target_func=mutex_init     house_func=debugfs_init
+inline in reference kernel, inline in target kernel
+examples/patches/CVE-2016-10293
+open success
+panel_debug_register_base   target not found
+examples/patches/CVE-2016-10294
+open success
+fg_memif_data_open   target not found
+fg_memif_dfs_reg_write   target not found
+fg_memif_dfs_reg_read   target not found
+fg_memif_dfs_close   target not found
+examples/patches/CVE-2016-10389
+examples/patches/CVE-2017-0451
+open success
+voice_svc_write   target not found
+voice_svc_send_req   both not found
+examples/patches/CVE-2017-0454
+open success
+audio_effects_open   target not found
+audio_effects_ioctl   target not found
+audio_effects_shared_ioctl   target not found
+audio_effects_release   target not found
+examples/patches/CVE-2017-0463
+open success
+msm_ipc_router_register_server   target not found
+examples/patches/CVE-2017-0465
+open success
+fastrpc_init   both not found
+context_alloc   both not found
+get_page_list   both not found
+examples/patches/CVE-2017-0520
+open success
+qcedev_set_hmac_auth_key   target not found
+qcedev_vbuf_ablk_cipher_max_xfer   target not found
+qcedev_hash_cmac   both not found
+qcedev_sha_update_max_xfer   target not found
+qcedev_ioctl   target not found
+examples/patches/CVE-2017-0531
+open success
+msm_lsm_ioctl_compat   target not found
+msm_lsm_ioctl_shared   target not found
+examples/patches/CVE-2017-0533
+open success
+examples/patches/CVE-2017-0576
+open success
+qcedev_check_cipher_params   both not found
+examples/patches/CVE-2017-0583
+open success
+examples/patches/CVE-2017-0604
+open success
+bcl_add_sysfs_nodes   both not found
+examples/patches/CVE-2017-0606
+open success
+voice_svc_open   target not found
+voice_svc_read   target not found
+voice_svc_release   target not found
+examples/patches/CVE-2017-0607
+open success
+examples/patches/CVE-2017-0608
+open success
+msm_dai_q6_set_channel_map   target not found
+examples/patches/CVE-2017-0609
+open success
+msm_cpe_lsm_ioctl_compat   target not found
+examples/patches/CVE-2017-0610
+open success
+msm_pcm_playback_copy   both not found
+examples/patches/CVE-2017-0611
+open success
+q6asm_memory_map_regions   target not found
+examples/patches/CVE-2017-0612
+open success
+examples/patches/CVE-2017-0613
+open success
+__qseecom_process_rpmb_svc_cmd   target not found
+__validate_send_service_cmd_inputs   both not found
+examples/patches/CVE-2017-0614
+open success
+__qseecom_get_fw_data   target not found
+__qseecom_load_fw   target not found
+__qseecom_get_fw_size   target not found
+examples/patches/CVE-2017-0619
+examples/patches/CVE-2017-0620
+open success
+scm_call   target not found
+examples/patches/CVE-2017-0622
+open success
+examples/patches/CVE-2017-0626
+open success
+_ce_setup_hash_direct   target not found
+_ce_f9_setup_direct   both not found
+_setup_cipher_aes_cmdlistptrs   target not found
+examples/patches/CVE-2017-0632
+open success
+examples/patches/CVE-2017-0812
+examples/patches/CVE-2017-5897
+open success
+examples/patches/CVE-2017-5970
+open success
+examples/patches/CVE-2017-6074
+open success
+examples/patches/CVE-2017-6214
+open success
+examples/patches/CVE-2017-6346
+open success
+fanout_add   both not found
+packet_rcv_spkt   both found
+examples/patches/CVE-2017-6423
+open success
+examples/patches/CVE-2017-6425
+open success
+examples/patches/CVE-2017-7184
+open success
+xfrm_replay_verify_len   both not found
+examples/patches/CVE-2017-7187
+open success
+examples/patches/CVE-2017-7308
+open success
+examples/patches/CVE-2017-7364
+examples/patches/CVE-2017-7365
+examples/patches/CVE-2017-7366
+open success
+kgsl_mem_entry_destroy   target not found
+_iommu_add_guard_page   target not found
+kgsl_iommu_map   target not found
+examples/patches/CVE-2017-7367
+examples/patches/CVE-2017-7368
+open success
+msm_cpe_lsm_ioctl_compat   target not found
+examples/patches/CVE-2017-7369
+open success
+examples/patches/CVE-2017-7370
+examples/patches/CVE-2017-7371
+examples/patches/CVE-2017-7372
+examples/patches/CVE-2017-7373
+examples/patches/CVE-2017-7374
+examples/patches/CVE-2017-7487
+open success
+examples/patches/CVE-2017-7495
+open success
+examples/patches/CVE-2017-7533
+open success
+examples/patches/CVE-2017-7541
+examples/patches/CVE-2017-7616
+open success
+examples/patches/CVE-2017-8240
+examples/patches/CVE-2017-8242
+open success
+qseecom_ioctl   target not found
+examples/patches/CVE-2017-8246
+open success
+examples/patches/CVE-2017-8250
+examples/patches/CVE-2017-8254
+open success
+examples/patches/CVE-2017-8255
+examples/patches/CVE-2017-8259
+examples/patches/CVE-2017-8262
+open success
+examples/patches/CVE-2017-8266
+open success
+examples/patches/CVE-2017-8273
+examples/patches/CVE-2017-8277
+examples/patches/CVE-2017-8279
+open success
+diag_send_event_mask_update   target not found
+examples/patches/CVE-2017-8281
+open success
+examples/patches/CVE-2017-8890
+open success
+examples/patches/CVE-2017-9075
+open success
+examples/patches/CVE-2017-9076
+open success
+examples/patches/CVE-2017-9150
+examples/patches/CVE-2017-9683
+examples/patches/CVE-2017-9697
+open success
+examples/patches/CVE-2017-9698
+examples/patches/CVE-2017-9700
+open success
+examples/patches/CVE-2017-9705
+open success
+examples/patches/CVE-2017-9716
+examples/patches/CVE-2017-9719
+open success
+examples/patches/CVE-2017-9721
+examples/patches/CVE-2017-9722
+examples/patches/CVE-2017-9724
+open success
+compat_get_ion_flush_data   both not found
+examples/patches/CVE-2017-9725
+open success
+examples/patches/CVE-2017-10661
+open success
+examples/patches/CVE-2017-10662
+open success
+examples/patches/CVE-2017-10996
+open success
+examples/patches/CVE-2017-10998
+open success
+examples/patches/CVE-2017-11003
+examples/patches/CVE-2017-11007
+examples/patches/CVE-2017-11016
+open success
+delete_cal_block   target not found
+examples/patches/CVE-2017-11018
+examples/patches/CVE-2017-11019
+open success
+examples/patches/CVE-2017-11023
+open success
+diag_smd_buffer_init   target not found
+diag_process_stm_mask   target not found
+examples/patches/CVE-2017-11024
+open success
+rmnet_usb_ctrl_free_rx_list   both not found
+rmnet_ctrl_tiocmget   both not found
+examples/patches/CVE-2017-11025
+open success
+audio_effects_ioctl   target not found
+audio_effects_shared_ioctl   target not found
+examples/patches/CVE-2017-11026
+examples/patches/CVE-2017-11027
+examples/patches/CVE-2017-11030
+open success
+hdmi_edid_sysfs_rda_res_info   both not found
+examples/patches/CVE-2017-11032
+examples/patches/CVE-2017-11033
+examples/patches/CVE-2017-11044
+open success
+kgsl_setup_useraddr   both not found
+kgsl_ioctl_gpumem_alloc_id   target not found
+examples/patches/CVE-2017-11047
+examples/patches/CVE-2017-11049
+examples/patches/CVE-2017-11069
+examples/patches/CVE-2017-11075
+examples/patches/CVE-2017-11079
+examples/patches/CVE-2017-11080
+examples/patches/CVE-2017-11473
+open success
+examples/patches/CVE-2017-11600
+open success
+examples/patches/CVE-2017-13215
+open success
+examples/patches/CVE-2017-14140
+open success
+examples/patches/CVE-2017-14497
+open success
+packet_snd   both not found
+examples/patches/CVE-2017-14869
+examples/patches/CVE-2017-14870
+examples/patches/CVE-2017-14873
+examples/patches/CVE-2017-14891
+open success
+examples/patches/CVE-2017-14892
+open success
+q6asm_callback   target not found
+examples/patches/CVE-2017-14897
+open success
+examples/patches/CVE-2017-14902
+open success
+examples/patches/CVE-2017-15115
+open success
+examples/patches/CVE-2017-15265
+open success
+snd_seq_create_port   both not found
+snd_seq_ioctl_get_port_info   both not found
+examples/patches/CVE-2017-15537
+examples/patches/CVE-2017-15649
+open success
+examples/patches/CVE-2017-15820
+open success
+examples/patches/CVE-2017-15826
+examples/patches/CVE-2017-15829
+open success
+process_release_memory   both not found
+examples/patches/CVE-2017-15833
+open success
+examples/patches/CVE-2017-15834
+open success
+examples/patches/CVE-2017-15845
+open success
+examples/patches/CVE-2017-15848
+open success
+examples/patches/CVE-2017-17712
+open success
+examples/patches/CVE-2017-17770
+open success
+examples/patches/CVE-2017-18061
+examples/patches/CVE-2017-18066
+open success
+msm_core_ioctl   target not found
+examples/patches/CVE-2017-1000380
+open success
+snd_timer_user_release   both found
+target_func=mutex_lock     house_func=snd_timer_user_release
+not inline in reference kernel, not inline in target kernel
+target_func=mutex_unlock     house_func=snd_timer_user_release
+not inline in reference kernel, not inline in target kernel
+examples/patches/CVE-2018-3563
+open success
+examples/patches/CVE-2018-3599
+open success
+diag_dci_init_handshake_remote   both not found
+countfoundperpatch=106
+countnotfoundperpatch=33
+locatepatch=139
+notlocatepatch=160
+opensuccesscountperpatch=222
+countfound=50
+countnotfound=231
+referencecountfound=201
+referencecountnotfound=80
+targetcountfound=54
+targetcountnotfound=227
+inlineinline=35
+inlinenotinline=0
+notinlineinline=12
+notinlinenotinline=14
