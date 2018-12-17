@@ -68,14 +68,12 @@ examples/patches/CVE-2014-9785
 open success
 qseecom_query_app_loaded   target not found
 qseecom_load_external_elf   target not found
-qseecom_send_service_cmd   target not found
 examples/patches/CVE-2014-9787
 open success
 __qseecom_send_cmd   target not found
 examples/patches/CVE-2014-9788
 open success
 voice_config_cvs_vocoder_amr_rate   target not found
-voice_send_cvs_register_cal_cmd   target not found
 voice_send_hd_cmd   target not found
 examples/patches/CVE-2014-9789
 open success
@@ -89,7 +87,6 @@ mmc_bkops_stats_read   target not found
 mmc_wr_pack_stats_read   target not found
 examples/patches/CVE-2014-9791
 open success
-n_tty_write   both found
 examples/patches/CVE-2014-9792
 examples/patches/CVE-2014-9795
 examples/patches/CVE-2014-9796
@@ -206,7 +203,6 @@ target_func=memcpy     house_func=wl_notify_sched_scan_results
 not inline in reference kernel, not inline in target kernel
 examples/patches/CVE-2016-0802
 open success
-wl_host_event   both found
 examples/patches/CVE-2016-1583
 open success
 examples/patches/CVE-2016-2059
@@ -364,7 +360,6 @@ examples/patches/CVE-2016-5862
 examples/patches/CVE-2016-5863
 open success
 hiddev_ioctl_usage   both not found
-hiddev_read   both not found
 examples/patches/CVE-2016-5864
 examples/patches/CVE-2016-5867
 open success
@@ -498,7 +493,6 @@ examples/patches/CVE-2016-7917
 open success
 examples/patches/CVE-2016-8414
 open success
-scm_call2   target not found
 examples/patches/CVE-2016-8418
 open success
 examples/patches/CVE-2016-8434
@@ -605,7 +599,6 @@ examples/patches/CVE-2016-10236
 examples/patches/CVE-2016-10275
 examples/patches/CVE-2016-10285
 open success
-mdss_dsi_ctrl_remove   target not found
 examples/patches/CVE-2016-10286
 examples/patches/CVE-2016-10287
 open success
@@ -623,7 +616,6 @@ target_func=mutex_init     house_func=debugfs_init
 inline in reference kernel, inline in target kernel
 examples/patches/CVE-2016-10293
 open success
-panel_debug_register_base   target not found
 examples/patches/CVE-2016-10294
 open success
 fg_memif_data_open   target not found
@@ -740,8 +732,6 @@ examples/patches/CVE-2017-7364
 examples/patches/CVE-2017-7365
 examples/patches/CVE-2017-7366
 open success
-kgsl_iommu_map   target not found
-kgsl_mem_entry_set_pend   both not found
 examples/patches/CVE-2017-7367
 examples/patches/CVE-2017-7368
 open success
@@ -780,7 +770,6 @@ examples/patches/CVE-2017-8273
 examples/patches/CVE-2017-8277
 examples/patches/CVE-2017-8279
 open success
-diag_send_msg_mask_update   target not found
 examples/patches/CVE-2017-8281
 open success
 examples/patches/CVE-2017-8890
@@ -820,13 +809,11 @@ examples/patches/CVE-2017-11003
 examples/patches/CVE-2017-11007
 examples/patches/CVE-2017-11016
 open success
-delete_cal_block   target not found
 examples/patches/CVE-2017-11018
 examples/patches/CVE-2017-11019
 open success
 examples/patches/CVE-2017-11023
 open success
-diag_add_hdlc_encoding   target not found
 examples/patches/CVE-2017-11024
 open success
 examples/patches/CVE-2017-11025
@@ -902,17 +889,17 @@ examples/patches/CVE-2018-3563
 open success
 examples/patches/CVE-2018-3599
 open success
-countfoundperpatch=103
+countfoundperpatch=94
 countnotfoundperpatch=27
-locatepatch=130
-notlocatepatch=169
+locatepatch=121
+notlocatepatch=178
 opensuccesscountperpatch=227
-countfound=45
-countnotfound=215
-referencecountfound=193
-referencecountnotfound=67
-targetcountfound=51
-targetcountnotfound=209
+countfound=43
+countnotfound=204
+referencecountfound=182
+referencecountnotfound=65
+targetcountfound=49
+targetcountnotfound=198
 inlineinline=34
 inlinenotinline=0
 notinlineinline=12
