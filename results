@@ -78,7 +78,7 @@ examples/patches/CVE-2014-9788
 open success
 voice_config_cvs_vocoder_amr_rate   target not found
 voice_send_mvm_cvd_version_cmd   target not found
-voice_send_cvp_device_channels_cmd   both not found
+voice_send_cvp_device_channels_cmd  housefunc:  voice_setup_vocproc   housefunc target not found
 examples/patches/CVE-2014-9789
 open success
 msm_audio_ion_alloc   target not found
@@ -102,9 +102,9 @@ open success
 _fdt_packblocks   both found
 examples/patches/CVE-2014-9803
 open success
-set_pte_at  housefunc:  remove_migration_pte   housefunc both found
+set_pte_at  housefunc:  do_set_pte   housefunc both found
 target_func=pte_valid_user     house_func=set_pte_at
-househouse_func=remove_migration_pte
+househouse_func=do_set_pte
 inline in reference kernel, inline in target kernel
 examples/patches/CVE-2014-9914
 open success
@@ -130,11 +130,11 @@ open success
 regulator_ena_gpio_free   both found
 examples/patches/CVE-2015-0572
 open success
-put_args   both not found
+put_args  housefunc:  fastrpc_internal_invoke   housefunc target not found
 compat_get_fastrpc_ioctl_invoke   target not found
 compat_get_fastrpc_ioctl_mmap   target not found
 fastrpc_internal_invoke   target not found
-get_args   both not found
+get_args  housefunc:  fastrpc_internal_invoke   housefunc target not found
 examples/patches/CVE-2015-3288
 open success
 do_linear_fault  housefunc:  handle_mm_fault   housefunc both found
@@ -198,7 +198,7 @@ target_func=WARN_ON_ONCE     house_func=perf_swevent_add
 inline in reference kernel, inline in target kernel
 examples/patches/CVE-2015-8964
 open success
-tty_set_termios_ldisc  housefunc:  tty_ldisc_reinit   housefunc both found
+tty_set_termios_ldisc  housefunc:  tty_set_ldisc   housefunc both found
 examples/patches/CVE-2015-8966
 open success
 sys_oabi_fcntl64   both not found
@@ -214,7 +214,7 @@ target_func=tiocgetd     house_func=tty_ioctl
 inline in reference kernel, inline in target kernel
 examples/patches/CVE-2016-0758
 open success
-asn1_find_indefinite_length   both not found
+asn1_find_indefinite_length  housefunc:  asn1_ber_decoder   housefunc target not found
 examples/patches/CVE-2016-0801
 examples/patches/CVE-2016-0802
 examples/patches/CVE-2016-1583
@@ -235,7 +235,7 @@ msm_audio_effects_popless_eq_handler   target not found
 examples/patches/CVE-2016-2067
 open success
 kgsl_setup_dmabuf_useraddr   target not found
-memdesc_sg_virt   both not found
+memdesc_sg_virt  housefunc:  kgsl_setup_anon_useraddr   housefunc target not found
 check_vma   both not found
 examples/patches/CVE-2016-2068
 open success
@@ -305,7 +305,7 @@ wcdcal_hwdep_ioctl_shared   target not found
 examples/patches/CVE-2016-3901
 open success
 qcedev_check_sha_params   target not found
-qcedev_check_cipher_params   both not found
+qcedev_check_cipher_params  housefunc:  qcedev_ioctl   housefunc target not found
 examples/patches/CVE-2016-3906
 open success
 examples/patches/CVE-2016-3907
@@ -314,13 +314,13 @@ audio_compat_ioctl   target not found
 examples/patches/CVE-2016-3931
 open success
 __qseecom_send_modfd_resp   target not found
-__validate_send_modfd_resp_inputs   both not found
+__validate_send_modfd_resp_inputs  housefunc:  __qseecom_send_modfd_resp   housefunc target not found
 examples/patches/CVE-2016-3938
 open success
-__mdss_overlay_src_split_sort   both not found
+__mdss_overlay_src_split_sort  housefunc:  __handle_overlay_prepare   housefunc target not found
 examples/patches/CVE-2016-3939
 open success
-mdss_misr_get_map   both not found
+mdss_misr_get_map  housefunc:  mdss_misr_disable   housefunc target not found
 examples/patches/CVE-2016-4794
 open success
 pcpu_extend_area_map   both found
@@ -342,13 +342,13 @@ examples/patches/CVE-2016-5342
 open success
 examples/patches/CVE-2016-5343
 open success
-voice_svc_send_req   both not found
+voice_svc_send_req  housefunc:  voice_svc_write   housefunc target not found
 examples/patches/CVE-2016-5344
 open success
-mdss_rotator_handle_request   both not found
-mdss_rotator_handle_request32   both not found
-__compat_async_position_update   both not found
-mdss_fb_async_position_update_ioctl   both not found
+mdss_rotator_handle_request  housefunc:  mdss_rotator_ioctl   housefunc target not found
+mdss_rotator_handle_request32  housefunc:  mdss_rotator_compat_ioctl   housefunc target not found
+__compat_async_position_update  housefunc:  mdss_fb_compat_ioctl   housefunc target not found
+mdss_fb_async_position_update_ioctl  housefunc:  mdss_fb_do_ioctl   housefunc target not found
 examples/patches/CVE-2016-5345
 open success
 examples/patches/CVE-2016-5347
@@ -379,7 +379,7 @@ examples/patches/CVE-2016-5859
 open success
 examples/patches/CVE-2016-5860
 open success
-msm_cpe_lsm_reg_model   both not found
+msm_cpe_lsm_reg_model  housefunc:  msm_cpe_lsm_process_params   housefunc target not found
 examples/patches/CVE-2016-5861
 open success
 mdss_mdp_gamut_config   target not found
@@ -689,12 +689,12 @@ mdss_debug_factor_write   target not found
 examples/patches/CVE-2016-10233
 examples/patches/CVE-2016-10234
 open success
-ipa_generate_rt_hw_tbl_v1_1   both not found
-ipa_generate_flt_hw_tbl_v1_1   both not found
+ipa_generate_rt_hw_tbl_v1_1  housefunc:  __ipa_commit_rt_v1_1   housefunc target not found
+ipa_generate_flt_hw_tbl_v1_1  housefunc:  __ipa_commit_flt_v1_1   housefunc target not found
 ipa_generate_flt_hw_tbl_common   target not found
 ipa2_nat_dma_cmd   target not found
 ipa_generate_flt_hw_tbl_v2   target not found
-ipa_generate_rt_hw_tbl_v2   both not found
+ipa_generate_rt_hw_tbl_v2  housefunc:  __ipa_commit_rt_v2   housefunc target not found
 ipa_generate_rt_hw_tbl_common   target not found
 examples/patches/CVE-2016-10236
 open success
@@ -720,7 +720,7 @@ open success
 debugfs_init   both found
 debug_open   target not found
 debug_close   target not found
-debugfs_exit   both not found
+debugfs_exit  housefunc:  sharedmem_qmi_exit   housefunc target not found
 target_func=mutex_init     house_func=debugfs_init
 inline in reference kernel, inline in target kernel
 examples/patches/CVE-2016-10293
@@ -736,7 +736,7 @@ fg_memif_dfs_close   target not found
 examples/patches/CVE-2016-10389
 examples/patches/CVE-2017-0451
 open success
-voice_svc_send_req   both not found
+voice_svc_send_req  housefunc:  voice_svc_write   housefunc target not found
 examples/patches/CVE-2017-0454
 open success
 audio_effects_ioctl   target not found
@@ -748,15 +748,15 @@ open success
 msm_ipc_router_register_server   target not found
 examples/patches/CVE-2017-0465
 open success
-context_build_overlap   both not found
-context_alloc   both not found
+context_build_overlap  housefunc:  fastrpc_internal_invoke   housefunc target not found
+context_alloc  housefunc:  fastrpc_internal_invoke   housefunc target not found
 examples/patches/CVE-2017-0520
 open success
 qcedev_sha_update_max_xfer   target not found
 qcedev_set_hmac_auth_key   target not found
 qcedev_ioctl   target not found
 qcedev_vbuf_ablk_cipher_max_xfer   target not found
-qcedev_hash_cmac   both not found
+qcedev_hash_cmac  housefunc:  qcedev_ioctl   housefunc target not found
 examples/patches/CVE-2017-0531
 open success
 msm_lsm_ioctl_shared   target not found
@@ -766,17 +766,17 @@ open success
 __from_user_pcc_coeff_v17   target not found
 __from_user_pa_data_v1_7   target not found
 __from_user_gamut_cfg_data_v17   target not found
-__from_user_igc_lut_data_v17   both not found
-__from_user_hist_lut_data_v1_7   both not found
-__from_user_pgc_lut_data_v1_7   both not found
+__from_user_igc_lut_data_v17  housefunc:  __from_user_igc_lut_data   housefunc target not found
+__from_user_hist_lut_data_v1_7  housefunc:  __from_user_hist_lut_data   housefunc target not found
+__from_user_pgc_lut_data_v1_7  housefunc:  __from_user_lut_cfg_data   housefunc target not found
 examples/patches/CVE-2017-0576
 open success
-qcedev_check_cipher_params   both not found
+qcedev_check_cipher_params  housefunc:  qcedev_ioctl   housefunc target not found
 examples/patches/CVE-2017-0583
 open success
 examples/patches/CVE-2017-0604
 open success
-bcl_add_sysfs_nodes   both not found
+bcl_add_sysfs_nodes  housefunc:  msm_bcl_register_param   housefunc target not found
 examples/patches/CVE-2017-0606
 open success
 voice_svc_open   target not found
@@ -784,8 +784,8 @@ voice_svc_read   target not found
 voice_svc_release   target not found
 examples/patches/CVE-2017-0607
 open success
-q6asm_set_shared_circ_buff   both not found
-q6asm_set_shared_pos_buff   both not found
+q6asm_set_shared_circ_buff  housefunc:  q6asm_open_shared_io   housefunc target not found
+q6asm_set_shared_pos_buff  housefunc:  q6asm_open_shared_io   housefunc target not found
 examples/patches/CVE-2017-0608
 open success
 msm_dai_q6_set_channel_map   target not found
@@ -794,7 +794,7 @@ open success
 msm_cpe_lsm_ioctl_compat   target not found
 examples/patches/CVE-2017-0610
 open success
-msm_pcm_playback_copy   both not found
+msm_pcm_playback_copy  housefunc:  msm_pcm_copy   housefunc target not found
 examples/patches/CVE-2017-0611
 open success
 q6asm_memory_map_regions   target not found
@@ -803,7 +803,7 @@ open success
 qseecom_mdtp_cipher_dip   target not found
 examples/patches/CVE-2017-0613
 open success
-__validate_send_service_cmd_inputs   both not found
+__validate_send_service_cmd_inputs  housefunc:  qseecom_send_service_cmd   housefunc target not found
 __qseecom_process_rpmb_svc_cmd   target not found
 examples/patches/CVE-2017-0614
 open success
@@ -827,10 +827,10 @@ _ce_setup_hash_direct   target not found
 _setup_aead_cmdlistptrs   target not found
 _setup_cipher_aes_cmdlistptrs   target not found
 _setup_auth_cmdlistptrs   target not found
-_setup_cipher_null_cmdlistptrs   both not found
+_setup_cipher_null_cmdlistptrs  housefunc:  qce_open   housefunc target not found
 _ce_setup_aead_direct   target not found
 _setup_aead_ccm_cmdlistptrs   target not found
-_ce_f9_setup_direct   both not found
+_ce_f9_setup_direct  housefunc:  qce_f9_req   housefunc target not found
 _setup_f8_cmdlistptrs   target not found
 examples/patches/CVE-2017-0632
 open success
@@ -880,15 +880,15 @@ examples/patches/CVE-2017-7364
 examples/patches/CVE-2017-7365
 examples/patches/CVE-2017-7366
 open success
-_setstate_alloc   both not found
-_iommu_map_guard_page   both not found
+_setstate_alloc  housefunc:  kgsl_iommu_init   housefunc target not found
+_iommu_map_guard_page  housefunc:  kgsl_iommu_map   housefunc target not found
 gpumem_alloc_entry   target not found
-a5xx_critical_packet_construct   both not found
+a5xx_critical_packet_construct  housefunc:  a5xx_init   housefunc target not found
 kgsl_iommu_get_gpuaddr   target not found
-_gpu_set_svm_region   both not found
-kgsl_allocate_global   both not found
+_gpu_set_svm_region  housefunc:  _search_range   housefunc target not found
+kgsl_allocate_global  housefunc:  a5xx_crashdump_init   housefunc target not found
 kgsl_allocate_user   target not found
-kgsl_allocate_secure   both not found
+kgsl_allocate_secure  housefunc:  kgsl_allocate_user   housefunc target not found
 kgsl_mem_entry_detach_process   target not found
 kgsl_mmu_put_gpuaddr   target not found
 kgsl_iommu_put_gpuaddr   target not found
@@ -917,7 +917,7 @@ examples/patches/CVE-2017-7372
 open success
 examples/patches/CVE-2017-7373
 open success
-mdss_fb_alloc_fb_ion_memory   both not found
+mdss_fb_alloc_fb_ion_memory  housefunc:  mdss_fb_fbmem_ion_mmap   housefunc target not found
 examples/patches/CVE-2017-7374
 examples/patches/CVE-2017-7487
 open success
@@ -957,8 +957,8 @@ examples/patches/CVE-2017-8246
 open success
 msm_afe_close   target not found
 msm_pcm_close   target not found
-msm_pcm_playback_close   both not found
-msm_pcm_capture_close   both not found
+msm_pcm_playback_close  housefunc:  msm_pcm_close   housefunc target not found
+msm_pcm_capture_close  housefunc:  msm_pcm_close   housefunc target not found
 examples/patches/CVE-2017-8250
 open success
 examples/patches/CVE-2017-8254
@@ -966,11 +966,11 @@ open success
 examples/patches/CVE-2017-8255
 examples/patches/CVE-2017-8259
 open success
-service_locator_send_msg   both not found
+service_locator_send_msg  housefunc:  get_service_location   housefunc target not found
 examples/patches/CVE-2017-8262
 open success
 kgsl_ioctl_gpuobj_import   target not found
-kgsl_mem_entry_create   both not found
+kgsl_mem_entry_create  housefunc:  kgsl_ioctl_gpuobj_import   housefunc target not found
 kgsl_ioctl_map_user_mem   target not found
 examples/patches/CVE-2017-8266
 open success
@@ -982,20 +982,20 @@ open success
 msm_dba_register_client   target not found
 examples/patches/CVE-2017-8279
 open success
-diag_send_msg_mask_update   both not found
+diag_send_msg_mask_update  housefunc:  diag_send_updates_peripheral   housefunc target not found
 diag_cmd_get_msg_mask   target not found
 diag_cmd_set_msg_mask   target not found
-diag_build_time_mask_exit   both not found
-diag_create_build_time_mask   both not found
+diag_build_time_mask_exit  housefunc:  diag_masks_exit   housefunc target not found
+diag_create_build_time_mask  housefunc:  diag_masks_init   housefunc target not found
 diag_cmd_get_ssid_range   target not found
-diag_build_time_mask_update   both not found
+diag_build_time_mask_update  housefunc:  diag_cntl_process_read_data   housefunc target not found
 diag_cmd_set_all_msg_mask   target not found
-diag_msg_mask_init   both not found
+diag_msg_mask_init  housefunc:  diag_masks_init   housefunc target not found
 diag_msg_mask_copy   target not found
 diag_cmd_get_build_mask   target not found
-process_ssid_range_report   both not found
-diag_create_msg_mask_table   both not found
-diag_msg_mask_exit   both not found
+process_ssid_range_report  housefunc:  diag_cntl_process_read_data   housefunc target not found
+diag_create_msg_mask_table  housefunc:  diag_masks_init   housefunc target not found
+diag_msg_mask_exit  housefunc:  diag_masks_exit   housefunc target not found
 diag_msg_mask_free   target not found
 diag_copy_to_user_msg_mask   target not found
 examples/patches/CVE-2017-8281
@@ -1026,7 +1026,7 @@ examples/patches/CVE-2017-9705
 open success
 glink_pkt_notify_rx   target not found
 glink_pkt_poll   target not found
-glink_pkt_init_add_device   both not found
+glink_pkt_init_add_device  housefunc:  msm_glink_pkt_probe   housefunc target not found
 glink_pkt_read   target not found
 examples/patches/CVE-2017-9716
 open success
@@ -1066,7 +1066,7 @@ create_cal_block   target not found
 examples/patches/CVE-2017-11018
 examples/patches/CVE-2017-11019
 open success
-mdss_fb_get_metadata   both not found
+mdss_fb_get_metadata  housefunc:  mdss_mdp_overlay_ioctl_handler   housefunc target not found
 examples/patches/CVE-2017-11023
 open success
 diag_hdlc_start_recovery   target not found
@@ -1096,7 +1096,7 @@ examples/patches/CVE-2017-11047
 open success
 pp_pa_cache_params_pipe_v1_7   target not found
 pp_pcc_cache_params_pipe_v1_7   target not found
-pp_hist_lut_cache_params_pipe_v1_7   both not found
+pp_hist_lut_cache_params_pipe_v1_7  housefunc:  pp_hist_lut_cache_params   housefunc target not found
 examples/patches/CVE-2017-11049
 open success
 mdss_mdp_layer_pre_commit_wfd   target not found
@@ -1125,10 +1125,10 @@ open success
 pp_pgc_get_config   target not found
 examples/patches/CVE-2017-14891
 open success
-_gpuobj_map_useraddr   both not found
+_gpuobj_map_useraddr  housefunc:  kgsl_ioctl_gpuobj_import   housefunc target not found
 examples/patches/CVE-2017-14892
 open success
-q6asm_set_shared_circ_buff   both not found
+q6asm_set_shared_circ_buff  housefunc:  q6asm_open_shared_io   housefunc target not found
 examples/patches/CVE-2017-14897
 open success
 __qseecom_qteec_issue_cmd   target not found
@@ -1148,7 +1148,7 @@ examples/patches/CVE-2017-15820
 open success
 examples/patches/CVE-2017-15826
 open success
-mdss_rotator_release_from_work_distribution   both not found
+mdss_rotator_release_from_work_distribution  housefunc:  mdss_rotator_release_entry   housefunc target not found
 mdss_rotator_close_session   target not found
 examples/patches/CVE-2017-15829
 open success
@@ -1191,15 +1191,15 @@ open success
 examples/patches/CVE-2018-3599
 open success
 diag_dci_notify_client   target not found
-countfoundperpatch=149
-countnotfoundperpatch=43
+countfoundperpatch=166
+countnotfoundperpatch=26
 locatepatch=196
 notlocatepatch=103
 opensuccesscountperpatch=250
 countfound=80
 countnotfound=324
-referencecountfound=288
-referencecountnotfound=116
+referencecountfound=347
+referencecountnotfound=57
 targetcountfound=85
 targetcountnotfound=319
 inlineinline=63
