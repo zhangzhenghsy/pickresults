@@ -11,7 +11,6 @@ ieee80211_sta_ps_deliver_wakeup   both not found
 ieee80211_tx_h_unicast_ps_buf   both not found
 examples/patches/CVE-2014-3145
 open success
-__skb_get_nlattr   both found
 examples/patches/CVE-2014-4014
 open success
 xfs_ioctl_setattr   both not found
@@ -45,9 +44,7 @@ open success
 rock_continue   both not found
 examples/patches/CVE-2014-9731
 open success
-udf_translate_to_linux   both not found
 udf_symlink_filler   both not found
-udf_get_filename   both not found
 udf_pc_to_char   both not found
 udf_readdir   both not found
 udf_find_entry   both not found
@@ -59,31 +56,17 @@ msm_audio_ion_mmap   target not found
 examples/patches/CVE-2014-9780
 open success
 examples/patches/CVE-2014-9781
-open success
-fb_cmap_to_user   both found
 examples/patches/CVE-2014-9784
 open success
-diag_dbgfs_read_status   target not found
-diag_dbgfs_read_dcistats   target not found
-diag_dbgfs_read_power   target not found
 examples/patches/CVE-2014-9785
 open success
-qseecom_send_service_cmd   target not found
-qseecom_load_external_elf   target not found
-qseecom_query_app_loaded   target not found
-qseecom_load_app   target not found
 examples/patches/CVE-2014-9787
 open success
 examples/patches/CVE-2014-9788
 open success
-voice_config_cvs_vocoder_amr_rate   target not found
-voice_send_mvm_cvd_version_cmd   target not found
-voice_send_cvp_device_channels_cmd  housefunc:  voice_setup_vocproc   housefunc target not found
 examples/patches/CVE-2014-9789
 open success
-msm_audio_ion_alloc   target not found
 msm_audio_ion_import   target not found
-msm_audio_ion_free   target not found
 examples/patches/CVE-2014-9790
 open success
 mmc_wr_pack_stats_read   both not found
@@ -121,10 +104,7 @@ target_func=sk_dst_set     house_func=ip4_datagram_release_cb
 inline in reference kernel, inline in target kernel
 examples/patches/CVE-2014-9922
 open success
-ecryptfs_mount   both found
 ovl_fill_super   reference not found
-target_func=pr_err     house_func=ecryptfs_mount
-inline in reference kernel, inline in target kernel
 examples/patches/CVE-2014-9940
 open success
 regulator_ena_gpio_free   both found
@@ -134,16 +114,10 @@ put_args  housefunc:  fastrpc_internal_invoke   housefunc target not found
 compat_get_fastrpc_ioctl_invoke   target not found
 compat_get_fastrpc_ioctl_mmap   target not found
 fastrpc_internal_invoke   target not found
-get_args  housefunc:  fastrpc_internal_invoke   housefunc target not found
 examples/patches/CVE-2015-3288
 open success
-do_linear_fault  housefunc:  handle_mm_fault   housefunc both found
-do_anonymous_page  housefunc:  handle_mm_fault   housefunc both found
 examples/patches/CVE-2015-3636
 open success
-ping_unhash   both found
-target_func=sk_nulls_node_init     house_func=ping_unhash
-inline in reference kernel, inline in target kernel
 examples/patches/CVE-2015-5706
 open success
 examples/patches/CVE-2015-6619
@@ -279,7 +253,6 @@ gser_ioctl   target not found
 examples/patches/CVE-2016-2546
 open success
 snd_timer_user_release   both found
-__snd_timer_user_ioctl  housefunc:  snd_timer_user_ioctl   housefunc both found
 snd_timer_user_open   both found
 target_func=mutex_unlock     house_func=snd_timer_user_release
 not inline in reference kernel, not inline in target kernel
@@ -295,7 +268,6 @@ examples/patches/CVE-2016-3854
 examples/patches/CVE-2016-3855
 examples/patches/CVE-2016-3858
 open success
-firmware_name_store   target not found
 examples/patches/CVE-2016-3860
 open success
 examples/patches/CVE-2016-3866
@@ -313,7 +285,6 @@ open success
 audio_compat_ioctl   target not found
 examples/patches/CVE-2016-3931
 open success
-__qseecom_send_modfd_resp   target not found
 __validate_send_modfd_resp_inputs  housefunc:  __qseecom_send_modfd_resp   housefunc target not found
 examples/patches/CVE-2016-3938
 open success
@@ -333,7 +304,6 @@ target_func=mutex_lock     house_func=pcpu_alloc
 not inline in reference kernel, not inline in target kernel
 examples/patches/CVE-2016-4998
 open success
-check_entry_size_and_hooks  housefunc:  translate_table   housefunc both found
 examples/patches/CVE-2016-5195
 open success
 examples/patches/CVE-2016-5340
@@ -356,13 +326,6 @@ open success
 msm_qti_pp_get_channel_map_mixer   target not found
 examples/patches/CVE-2016-5696
 open success
-tcp_send_challenge_ack   both found
-target_func=WRITE_ONCE     house_func=tcp_send_challenge_ack
-inline in reference kernel, inline in target kernel
-target_func=READ_ONCE     house_func=tcp_send_challenge_ack
-inline in reference kernel, inline in target kernel
-target_func=WRITE_ONCE     house_func=tcp_send_challenge_ack
-inline in reference kernel, inline in target kernel
 examples/patches/CVE-2016-5853
 open success
 examples/patches/CVE-2016-5854
@@ -387,7 +350,6 @@ examples/patches/CVE-2016-5862
 open success
 examples/patches/CVE-2016-5863
 open success
-hiddev_ioctl_usage   target not found
 examples/patches/CVE-2016-5864
 examples/patches/CVE-2016-5867
 open success
@@ -452,10 +414,9 @@ aac_in_compat_ioctl   target not found
 amrnb_in_compat_ioctl   target not found
 audio_compat_ioctl   target not found
 audio_aio_compat_ioctl   target not found
-qcelp_in_compat_ioctl   target not found
 audio_compat_ioctl   target not found
+qcelp_in_compat_ioctl   target not found
 evrc_in_compat_ioctl   target not found
-audio_effects_compat_ioctl   target not found
 audio_compat_ioctl   target not found
 examples/patches/CVE-2016-6725
 open success
@@ -483,11 +444,10 @@ SYSCALL_DEFINE5   both not found
 perf_event_read_group  housefunc:  perf_read   housefunc both found
 perf_event_task_enable   both found
 perf_read   both found
-perf_event_for_each  housefunc:  _perf_ioctl   housefunc both found
+_perf_ioctl   both found
 perf_event_task_disable   both found
 perf_event_for_each_child   both found
-_perf_ioctl   both found
-_perf_event_refresh  housefunc:  perf_event_refresh   housefunc both found
+perf_event_for_each  housefunc:  _perf_ioctl   housefunc both found
 target_func=mutex_lock_double     house_func=perf_pmu_migrate_context
 inline in reference kernel, inline in target kernel
 target_func=mutex_unlock     house_func=perf_pmu_migrate_context
@@ -509,8 +469,7 @@ target_func=perf_read_hw     house_func=perf_read
 inline in reference kernel, inline in target kernel
 target_func=perf_event_ctx_unlock     house_func=perf_read
 inline in reference kernel, inline in target kernel
-target_func=lockdep_assert_held     house_func=perf_event_for_each
-househouse_func=_perf_ioctl
+target_func=_perf_event_refresh     house_func=_perf_ioctl
 inline in reference kernel, inline in target kernel
 target_func=list_for_each_entry     house_func=perf_event_task_disable
 inline in reference kernel, inline in target kernel
@@ -520,37 +479,23 @@ target_func=perf_event_for_each_child     house_func=perf_event_task_disable
 not inline in reference kernel, inline in target kernel
 target_func=perf_event_ctx_unlock     house_func=perf_event_task_disable
 inline in reference kernel, inline in target kernel
-target_func=_perf_event_refresh     house_func=_perf_ioctl
+target_func=lockdep_assert_held     house_func=perf_event_for_each
+househouse_func=_perf_ioctl
 inline in reference kernel, inline in target kernel
-target_func=_perf_event_enable     house_func=_perf_event_refresh
-househouse_func=perf_event_refresh
-not inline in reference kernel, not inline in target kernel
 examples/patches/CVE-2016-6791
 open success
 audio_aio_release   target not found
 examples/patches/CVE-2016-6828
 open success
-tcp_check_send_head  housefunc:  tcp_sendmsg   housefunc both found
-target_func=tcp_sk     house_func=tcp_check_send_head
-househouse_func=tcp_sendmsg
-inline in reference kernel, inline in target kernel
 examples/patches/CVE-2016-7042
 open success
 proc_keys_show   reference not found
 examples/patches/CVE-2016-7097
 open success
 ext2_set_acl   both not found
-__btrfs_set_acl   both not found
-v9fs_xattr_set_acl   both not found
-gfs2_set_acl   both not found
-__ext4_set_acl   reference not found
-ceph_set_acl   both not found
-hfsplus_set_posix_acl   both not found
-__f2fs_set_acl   reference not found
-xfs_set_acl   both not found
-__jfs_set_acl   both not found
 ocfs2_set_acl   both not found
-__reiserfs_set_acl   both not found
+xfs_set_acl   both not found
+__ext4_set_acl   reference not found
 jffs2_set_acl   both not found
 examples/patches/CVE-2016-7117
 open success
@@ -584,7 +529,6 @@ open success
 hid_input_field  housefunc:  hid_report_raw_event   housefunc both found
 examples/patches/CVE-2016-7916
 open success
-environ_read   both found
 examples/patches/CVE-2016-7917
 open success
 examples/patches/CVE-2016-8414
@@ -598,12 +542,8 @@ kgsl_ioctl_syncsource_create_fence   target not found
 kgsl_add_fence_event   target not found
 examples/patches/CVE-2016-8450
 open success
-msm_cpe_lsm_ioctl_shared   target not found
 examples/patches/CVE-2016-8463
 open success
-fuse_readpages_fill   both found
-target_func=lru_cache_add_file     house_func=fuse_readpages_fill
-not inline in reference kernel, inline in target kernel
 examples/patches/CVE-2016-8480
 open success
 qseecom_load_app   target not found
@@ -614,14 +554,7 @@ open success
 mpi_powm   target not found
 examples/patches/CVE-2016-8655
 open success
-packet_setsockopt   both found
 packet_set_ring   both found
-target_func=lock_sock     house_func=packet_setsockopt
-inline in reference kernel, inline in target kernel
-target_func=release_sock     house_func=packet_setsockopt
-not inline in reference kernel, inline in target kernel
-target_func=lock_sock     house_func=packet_set_ring
-inline in reference kernel, inline in target kernel
 target_func=release_sock     house_func=packet_set_ring
 not inline in reference kernel, not inline in target kernel
 examples/patches/CVE-2016-9120
@@ -670,12 +603,6 @@ udp_recvmsg   both found
 udpv6_recvmsg   both found
 target_func=udp_lib_checksum_complete     house_func=udp_recvmsg
 inline in reference kernel, inline in target kernel
-target_func=skb_csum_unnecessary     house_func=udp_recvmsg
-inline in reference kernel, inline in target kernel
-target_func=udp_lib_checksum_complete     house_func=udpv6_recvmsg
-inline in reference kernel, inline in target kernel
-target_func=skb_csum_unnecessary     house_func=udpv6_recvmsg
-inline in reference kernel, inline in target kernel
 examples/patches/CVE-2016-10230
 open success
 qce_aead_req   target not found
@@ -690,9 +617,8 @@ examples/patches/CVE-2016-10233
 examples/patches/CVE-2016-10234
 open success
 ipa_generate_rt_hw_tbl_v1_1  housefunc:  __ipa_commit_rt_v1_1   housefunc target not found
-ipa_generate_flt_hw_tbl_v1_1  housefunc:  __ipa_commit_flt_v1_1   housefunc target not found
 ipa_generate_flt_hw_tbl_common   target not found
-ipa2_nat_dma_cmd   target not found
+ipa_generate_flt_hw_tbl_v1_1  housefunc:  __ipa_commit_flt_v1_1   housefunc target not found
 ipa_generate_flt_hw_tbl_v2   target not found
 ipa_generate_rt_hw_tbl_v2  housefunc:  __ipa_commit_rt_v2   housefunc target not found
 ipa_generate_rt_hw_tbl_common   target not found
@@ -749,7 +675,6 @@ msm_ipc_router_register_server   target not found
 examples/patches/CVE-2017-0465
 open success
 context_build_overlap  housefunc:  fastrpc_internal_invoke   housefunc target not found
-context_alloc  housefunc:  fastrpc_internal_invoke   housefunc target not found
 examples/patches/CVE-2017-0520
 open success
 qcedev_sha_update_max_xfer   target not found
@@ -809,12 +734,9 @@ examples/patches/CVE-2017-0614
 open success
 __qseecom_load_fw   target not found
 qseecom_load_commonlib_image   target not found
-__qseecom_get_fw_size   target not found
-__qseecom_get_fw_data   target not found
 examples/patches/CVE-2017-0619
 examples/patches/CVE-2017-0620
 open success
-scm_call   target not found
 examples/patches/CVE-2017-0622
 open success
 examples/patches/CVE-2017-0626
@@ -853,9 +775,6 @@ open success
 dccp_rcv_state_process   both not found
 examples/patches/CVE-2017-6214
 open success
-tcp_splice_read   both found
-target_func=skb_queue_empty     house_func=tcp_splice_read
-inline in reference kernel, inline in target kernel
 examples/patches/CVE-2017-6346
 open success
 fanout_add  housefunc:  packet_setsockopt   housefunc both found
@@ -867,15 +786,11 @@ __to_user_pcc_coeff_v1_7   target not found
 __to_user_pa_data_v1_7   target not found
 examples/patches/CVE-2017-7184
 open success
-xfrm_replay_verify_len  housefunc:  xfrm_new_ae   housefunc both found
 examples/patches/CVE-2017-7187
 open success
 sg_ioctl   target not found
 examples/patches/CVE-2017-7308
 open success
-packet_set_ring   both found
-target_func=BLK_PLUS_PRIV     house_func=packet_set_ring
-inline in reference kernel, inline in target kernel
 examples/patches/CVE-2017-7364
 examples/patches/CVE-2017-7365
 examples/patches/CVE-2017-7366
@@ -926,23 +841,8 @@ examples/patches/CVE-2017-7495
 open success
 examples/patches/CVE-2017-7533
 open success
-__fsnotify_parent   both found
 debugfs_rename   both found
 vfs_rename2   target not found
-target_func=fsnotify     house_func=__fsnotify_parent
-not inline in reference kernel, not inline in target kernel
-target_func=release_dentry_name_snapshot     house_func=__fsnotify_parent
-not inline in reference kernel, not inline in target kernel
-target_func=fsnotify     house_func=__fsnotify_parent
-not inline in reference kernel, not inline in target kernel
-target_func=take_dentry_name_snapshot     house_func=__fsnotify_parent
-not inline in reference kernel, not inline in target kernel
-target_func=release_dentry_name_snapshot     house_func=debugfs_rename
-not inline in reference kernel, not inline in target kernel
-target_func=fsnotify_move     house_func=debugfs_rename
-inline in reference kernel, inline in target kernel
-target_func=release_dentry_name_snapshot     house_func=debugfs_rename
-not inline in reference kernel, not inline in target kernel
 examples/patches/CVE-2017-7541
 examples/patches/CVE-2017-7616
 open success
@@ -957,8 +857,6 @@ examples/patches/CVE-2017-8246
 open success
 msm_afe_close   target not found
 msm_pcm_close   target not found
-msm_pcm_playback_close  housefunc:  msm_pcm_close   housefunc target not found
-msm_pcm_capture_close  housefunc:  msm_pcm_close   housefunc target not found
 examples/patches/CVE-2017-8250
 open success
 examples/patches/CVE-2017-8254
@@ -970,7 +868,6 @@ service_locator_send_msg  housefunc:  get_service_location   housefunc target no
 examples/patches/CVE-2017-8262
 open success
 kgsl_ioctl_gpuobj_import   target not found
-kgsl_mem_entry_create  housefunc:  kgsl_ioctl_gpuobj_import   housefunc target not found
 kgsl_ioctl_map_user_mem   target not found
 examples/patches/CVE-2017-8266
 open success
@@ -987,7 +884,6 @@ diag_cmd_get_msg_mask   target not found
 diag_cmd_set_msg_mask   target not found
 diag_build_time_mask_exit  housefunc:  diag_masks_exit   housefunc target not found
 diag_create_build_time_mask  housefunc:  diag_masks_init   housefunc target not found
-diag_cmd_get_ssid_range   target not found
 diag_build_time_mask_update  housefunc:  diag_cntl_process_read_data   housefunc target not found
 diag_cmd_set_all_msg_mask   target not found
 diag_msg_mask_init  housefunc:  diag_masks_init   housefunc target not found
@@ -1008,8 +904,6 @@ open success
 sctp_v6_create_accept_sk   both not found
 examples/patches/CVE-2017-9076
 open success
-tcp_v6_syn_recv_sock   both found
-dccp_v6_request_recv_sock   both not found
 examples/patches/CVE-2017-9150
 open success
 examples/patches/CVE-2017-9683
@@ -1026,7 +920,6 @@ examples/patches/CVE-2017-9705
 open success
 glink_pkt_notify_rx   target not found
 glink_pkt_poll   target not found
-glink_pkt_init_add_device  housefunc:  msm_glink_pkt_probe   housefunc target not found
 glink_pkt_read   target not found
 examples/patches/CVE-2017-9716
 open success
@@ -1043,16 +936,11 @@ open success
 compat_get_ion_flush_data   target not found
 examples/patches/CVE-2017-9725
 open success
-cma_alloc   both found
-target_func=pr_debug     house_func=cma_alloc
-inline in reference kernel, inline in target kernel
 examples/patches/CVE-2017-10661
 open success
 timerfd_setup_cancel  housefunc:  do_timerfd_settime   housefunc both found
-SYSCALL_DEFINE2   both not found
 examples/patches/CVE-2017-10662
 open success
-sanity_check_raw_super   both not found
 examples/patches/CVE-2017-10996
 open success
 examples/patches/CVE-2017-10998
@@ -1066,7 +954,6 @@ create_cal_block   target not found
 examples/patches/CVE-2017-11018
 examples/patches/CVE-2017-11019
 open success
-mdss_fb_get_metadata  housefunc:  mdss_mdp_overlay_ioctl_handler   housefunc target not found
 examples/patches/CVE-2017-11023
 open success
 diag_hdlc_start_recovery   target not found
@@ -1166,9 +1053,6 @@ examples/patches/CVE-2017-15848
 open success
 examples/patches/CVE-2017-17712
 open success
-raw_sendmsg   both found
-target_func=flowi4_init_output     house_func=raw_sendmsg
-inline in reference kernel, inline in target kernel
 examples/patches/CVE-2017-17770
 open success
 examples/patches/CVE-2017-18061
@@ -1191,18 +1075,18 @@ open success
 examples/patches/CVE-2018-3599
 open success
 diag_dci_notify_client   target not found
-countfoundperpatch=166
+countfoundperpatch=142
 countnotfoundperpatch=26
-locatepatch=196
-notlocatepatch=103
-opensuccesscountperpatch=250
-countfound=80
-countnotfound=324
-referencecountfound=347
-referencecountnotfound=57
-targetcountfound=85
-targetcountnotfound=319
-inlineinline=63
+locatepatch=172
+notlocatepatch=127
+opensuccesscountperpatch=249
+countfound=59
+countnotfound=282
+referencecountfound=297
+referencecountnotfound=44
+targetcountfound=63
+targetcountnotfound=278
+inlineinline=47
 inlinenotinline=0
-notinlineinline=9
-notinlinenotinline=43
+notinlineinline=7
+notinlinenotinline=36
